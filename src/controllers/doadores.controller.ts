@@ -22,7 +22,7 @@ export async function obterDoadores(req: Request, res: Response) {
   try {
     const doadores = await doadorService.obterDoadores();
 
-    res.status(200).json(doadores);
+    res.status(200).json(doadores.rows);
   } catch (err) {
     console.error('Erro ao obter doadores:', err);
     res.status(500).send('Erro ao obter doadores');

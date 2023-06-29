@@ -11,10 +11,11 @@ class DoadorRepository {
   }
 
   async obterDoadores(): Promise<QueryResult> {
-    const query = 'SELECT * FROM donation';
+    const query = 'SELECT id, nome, idade, sexo, tipo_sanguineo, data_doacao FROM donation';
 
     return this.pool.query(query);
   }
 }
 
 export default DoadorRepository;
+
